@@ -29,4 +29,39 @@ faster than they do.
 
 *<strong>Imaginary Numbers (rarely used)</strong>*
 <li>complex64 complex128</li>
+<br>
+<hr>
+
+## Computed Constants
+<li>Constants cannot be created using the walrus operator</li>
+<li>Constants must be known at runtime, requiring an initial value</li>
+<li>However, constants can be computed as long as the computation can happen at compile time</li>
+<li>Cannot declare a constant that can only be computed at run-time like in javascript. breaking example:<br>
+<strong>the current time can only be known when the program is running</strong><br> 
+<p style="color: red">const currentTime = time.Now()</p>
+</li>
+<br>
+<hr>
+
+## Go's Speed
+<li>Go is generally faster than interpreted languages or VM powered languages, but slighly slower than other compiled 
+languages, that is mostly due to its automated memory management, also known as "Go runtime".</li>
+<br>
+<hr>
+
+## Formatting Strings
+<li>fmt.Printf - Prints a formatted string to standard out</li>
+<li>fmt.Sprintf() - Returns the formatted string</li>
+<strong>Default Representation</strong>
+<li>The <span style="color: teal">%v</span> variant represents the Go syntax representation of a value</li>
+To be more specific:<br>
+<strong>String</strong>
+<li>s := fmt.Sprintf("I am <span style="color: teal">%s</span> years old", "way too many")</li>
+<strong>Integer</strong>
+<li>s := fmt.Sprintf("I am <span style="color: teal">%d</span> years old", 10)</li>
+<strong>Float</strong>
+<li>s := fmt.Sprintf("I am <span style="color: teal">%f</span> years old", 10.523)</li>
+<li>s := fmt.Sprintf("I am <span style="color: teal">%.2f</span> years old", 10.523)</li>
+<em>The ".2" rounds the number to 2 decimal places</em>
+
 
