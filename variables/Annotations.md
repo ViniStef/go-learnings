@@ -63,5 +63,13 @@ To be more specific:<br>
 <li>s := fmt.Sprintf("I am <span style="color: teal">%f</span> years old", 10.523)</li>
 <li>s := fmt.Sprintf("I am <span style="color: teal">%.2f</span> years old", 10.523)</li>
 <em>The ".2" rounds the number to 2 decimal places</em>
+<br>
+<hr>
+
+## Runes and String encoding
+<li>Rune is an alias for int32, meaning a rune is a 32-bit integer, which is large enough to hold any Unicode code point</li>
+<li>If I need to work with individual characters in a string, I should use the rune type. It breaks strings up
+into their individual characters, which can be more than one byte long.</li>
+<li>We can use zany characters like emojis and Chinese characters in our strings, and Go would handle them just fine</li>
 
 
