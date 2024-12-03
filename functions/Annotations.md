@@ -14,3 +14,7 @@
 where the underscore is a convention, in Go it is a real language feature.
 </li>
 <li>The Go compiler <strong>will throw an error</strong> if you have any unused variable declarations in your code, so you need to ignore anything you don't intend to use.</li>
+
+## Named Return Values
+<li>A return statement without arguments returns the named return values. This is known as a "naked" return.
+Naked return statements should be used only in short functions. They can harm readability in longer functions.</li>
