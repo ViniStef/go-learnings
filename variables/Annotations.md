@@ -63,6 +63,7 @@ To be more specific:<br>
 <li>s := fmt.Sprintf("I am <span style="color: teal">%f</span> years old", 10.523)</li>
 <li>s := fmt.Sprintf("I am <span style="color: teal">%.2f</span> years old", 10.523)</li>
 <em>The ".2" rounds the number to 2 decimal places</em>
+<li>You can use <span style="color: teal">%t</span> for boolean values</li>
 <br>
 <hr>
 
