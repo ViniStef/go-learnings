@@ -6,8 +6,6 @@ func concat(s1, s2 string) string {
 	return s1 + s2
 }
 
-// don't touch below this line
-
 func main() {
 	test("Lane,", " happy birthday!")
 	test("Elon,", " hope that Tesla thing works out")
