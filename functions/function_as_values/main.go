@@ -5,7 +5,7 @@ func reformat(message string, formatter func(string) string) string {
 	formatMessageTwo := formatter(formatMessageOne)
 	formatMessageLast := formatter(formatMessageTwo)
 
-	prefix := "TEXTIO"
+	prefix := "TEXTIO: "
 
 	return prefix + formatMessageLast
 }
