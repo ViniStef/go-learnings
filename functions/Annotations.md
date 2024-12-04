@@ -46,3 +46,11 @@ func main() {
     fmt.Println(increment()) // prints 11
     fmt.Println(increment()) // prints 12
 }
+
+## Defer
+<li>Defer is a feature in Go that allows you to guarantee the execution of a process. The deferred call's arguments
+are evaluated immediately but the actual call is not executed until the surrounding function returns. It is useful when
+you need to assure that something happens inside a function regardless of the outcome, specially when there's a lot of 
+returns. It is important to note that the defer call happens as soon as the return happens, but the surrounding function
+returns the actual value after it. Think of it like a finally on a try-catch-finally in other programming languages.
+</li>
