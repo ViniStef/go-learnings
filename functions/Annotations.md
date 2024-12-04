@@ -31,3 +31,18 @@ func getCoords() (x, y int){
 
 ## Guard Clause
 <li>It is an early return from a function if a given condition is met</li>
+
+## Closures
+<li>A closure is a function that captures and retains access to variables from its surrounding scope, allowing it to access and modify those variables even after the scope in which they were defined has ended.</li>
+<p>Example: </p>
+func main() {
+    // Creates a closure that captures the variable `x`
+    x := 10
+    increment := func() int {
+        x++
+        return x
+    }
+
+    fmt.Println(increment()) // prints 11
+    fmt.Println(increment()) // prints 12
+}
