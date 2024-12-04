@@ -18,3 +18,16 @@ where the underscore is a convention, in Go it is a real language feature.
 ## Named Return Values
 <li>A return statement without arguments returns the named return values. This is known as a "naked" return.
 Naked return statements should be used only in short functions. They can harm readability in longer functions.</li>
+
+## Explicit Returns
+<li>You can have named return values but still explicitly return values if wanted. Example:</li>
+func getCoords() (x, y int){
+  return x, y // this is explicit
+}
+<li>We also don't need to return the named return values, we can simply sort of override it. Example: </li>
+func getCoords() (x, y int){
+  return 5, 6 // this is explicit, x and y are NOT returned
+}
+
+## Guard Clause
+<li>It is an early return from a function if a given condition is met</li>
