@@ -54,3 +54,21 @@ you need to assure that something happens inside a function regardless of the ou
 returns. It is important to note that the defer call happens as soon as the return happens, but the surrounding function
 returns the actual value after it. Think of it like a finally on a try-catch-finally in other programming languages.
 </li>
+
+## Block Scope
+<li>Go is block-scoped, unlike some other languages such as python which is function scoped. Variables defined inside
+a block can only be accessed within that block (and its nested blocks).Example:</li>
+package main
+
+// scoped to the entire "main" package (basically global)
+var age = 19
+
+func sendEmail() {
+// scoped to the "sendEmail" function
+name := "Jon Snow"
+
+    for i := 0; i < 5; i++ {
+        // scoped to the "for" body
+        email := "snow@winterfell.net"
+    }
+}
