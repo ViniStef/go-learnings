@@ -83,3 +83,15 @@ type stats struct {
 	NumLikes uint8
 }
 ```
+
+## Empty Structs
+<li>Empty structs take up no space in memory, making them the smallest possible type in Go. Example:</li>
+
+```bash
+// anonymous empty struct type
+empty := struct{}{}
+
+// named empty struct type
+type emptyStruct struct{}
+empty := emptyStruct{}
+```
