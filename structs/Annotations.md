@@ -63,3 +63,23 @@ height: 10,
 fmt.Println(r.area())
 // prints 50
 ```
+
+## Memory Layout
+<li>Structs sit in memory in a contiguous block, with fields placed one after another as defined in the struct. The order
+can have a big impact on memory usage. Example of a good one first and a bad one after:</li>
+
+```bash
+type stats struct {
+	Reach    uint16
+	NumPosts uint8
+	NumLikes uint8
+}
+```
+
+```bash
+type stats struct {
+	NumPosts uint8
+	Reach    uint16
+	NumLikes uint8
+}
+```
