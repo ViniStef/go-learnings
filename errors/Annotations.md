@@ -27,3 +27,9 @@ func sendSMS(msg, userName string) error {
     ...
 }
 ```
+
+## Error Package
+
+```bash
+var err error = errors.New("something went wrong")
+```
