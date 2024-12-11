@@ -33,3 +33,33 @@ func sendSMS(msg, userName string) error {
 ```bash
 var err error = errors.New("something went wrong")
 ```
+
+## Panic
+<li>When a function calls panic, the program crashes and prints a stack trace.</li>
+<li>The panic function goes out of the flow of the current function and up to the call stack until it reaches a function that
+defers a recover. If no function calls recover, the goroutine (often the entire program) crashes.
+</li>
+
+```bash
+func enrichUser(userID string) User {
+    user, err := getUser(userID)
+    if err != nil {
+        panic(err)
+    }
+    return user
+}
+
+func main() {
+    defer func() {
+        if r := recover(); r != nil {
+            fmt.Println("recovered from panic:", r)
+        }
+    }()
+
+    // this panics, but the defer/recover block catches it
+    // a truly astonishingly bad way to handle errors
+    enrichUser("123")
+}
+```
+
+<li>log.Fatal() is a nice alternative to exit your program from a unrecoverable state.</li>
