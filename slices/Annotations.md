@@ -149,3 +149,6 @@ for i, fruit := range fruits {
 // 1 banana
 // 2 grape
 ```
+
+## Currying 
+<li>Function currying is a concept from functional programming and involves partial application of functions. It allows a function with multiple arguments to be transformed into a sequence of functions, each taking a single argument.</li>
